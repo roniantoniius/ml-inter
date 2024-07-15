@@ -1,0 +1,149 @@
+---------------------------------------------------------------------------
+                        Proyek Analisis Sentimen
+---------------------------------------------------------------------------
+
+1. Topiknya Analisis Sentimen Tapi Bebas Studi Kasusnya (Lihat HuggingFace)
+
+Kriteria 1: Data merupakan hasil scraping secara mandiri
+
+Anda diberi kebebasan untuk mengambil data atau scraping menggunakan bahasa pemrograman Python dari berbagai sumber, seperti platform PlayStore, X, Instagram, komentar pada penilaian barang di e-commerce, dan lain-lain. Jumlah dataset minimal yang harus diperoleh adalah 3.000 sampel. 
+
+
+Kriteria 2: Melakukan tahapan ekstraksi fitur dan pelabelan data
+
+Metode yang digunakan bebas sesuai dengan preferensi masing-masing peserta. Tahapan ini penting untuk mempersiapkan data sehingga dapat diolah lebih lanjut dalam proses pelatihan model.
+
+
+Kriteria 3: Menggunakan algoritma pelatihan machine learning
+
+Pilihan algoritma pelatihan ini haruslah sesuai dengan tujuan analisis sentimen yang ingin dicapai.
+
+
+Kriteria 4: Akurasi testing set yang didapatkan untuk setiap skema pelatihan minimal harus mencapai 85%
+
+Penilaian:
+1. Menggunakan algoritma deep learning di luar dari contoh latihan
+2. Akurasi pada training set dan testing set di atas 92%. 
+3. Dataset memiliki minimal tiga kelas.
+4. Memiliki jumlah data minimal 10.000 sampel data.
+5. Melakukan 3 percobaan skema pelatihan yang berbeda. Skema ini dapat dibedakan dari variasi algoritma pelatihan, metode ekstraksi fitur, pelabelan, dan pembagian data dengan memilih minimal 2 kombinasi.
+6. Melakukan inference atau testing dalam file .ipynb atau .py yang menghasilkan output berupa kelas kategorikal (contoh: negatif, netral, dan positif).
+
+
+⭐⭐⭐ = Semua kriteria utama terpenuhi, tetapi tidak terdapat saran yang terpenuhi.
+
+⭐⭐⭐⭐ = Semua kriteria utama terpenuhi dan menerapkan minimal 3 dari seluruh saran yang ada di atas.
+
+⭐⭐⭐⭐⭐ = Semua kriteria utama terpenuhi dan menerapkan semua saran yang ada di atas.
+
+
+File yang dikumpulkan adalah berikut:
+- Kriteria Utama
+	- Notebook pelatihan model dengan format .ipynb.
+	- File kode scraping dengan format .py atau .ipynb.
+	- File requirements.txt.
+	- Dataset hasil scraping dengan format .csv atau .json.
+
+Kriteria Opsional
+	- Notebook pelatihan model berisi cell inference jika menerapkan saran ke-6.
+
+
+Mengirimkan pekerjaan Anda dalam 1 folder yang telah di-zip.
+
+File .ipynb yang dikirim telah dijalankan terlebih dahulu sehingga output ada tanpa reviewer perlu menjalankan ulang notebook.
+
+
+Percobaan:
+
+Belajar Setiap Algoritmanya !!! 
+
+- Besok Duplikat File Kagglenya
+
+Jadi bebas dibagian apa aja perbedaan tekniknya, tapi yang jelas minimal pada suatu tahapan itu metode/tekniknya berbeda.
+
+- Disaranin Untuk Tiap Percobaan Algoritma dan Teknik Pelabelan Berbeda
+- TF-IDF kayaknya teknik Esktraksi Fitur paling cocok
+- Suatu Percobaan / Skema itu setidaknya lebih dari 92%, tapi wajib lebih dari 85%
+
+Opsional Algoritma: Random Forest Classifier (untuk multi-class)
+
+Percobaan 1:
+● Pelabelan: SentiWordNet (3 Kelas) / VADER / TextBlob
+● Pembagian Data: 80% training, 20% testing
+● Ekstraksi Fitur: BERT atau DistilBERT embeddings / TF-IDF atau N-grams
+● Algoritma Pelatihan: BERT atau DistilBERT (Distilled BERT)
+
+Percobaan 2:
+● Pelabelan: SentiWordNet (3 Kelas) / VADER / TextBlob
+● Pembagian Data: 75% training, 25% testing
+● Ekstraksi Fitur: RoBERTa atau XLNet embeddings / Word2Vec / TF-IDF
+● Algoritma Pelatihan: RoBERTa atau XLNet / GloVe
+
+Percobaan 3:
+● Pelabelan: SentiWordNet (3 Kelas) / VADER / TextBlob
+● Pembagian Data: 70% training, 30% testing
+● Ekstraksi Fitur: T5 atau ALBERT Embeddings / FashText / BoW
+● Algoritma Pelatihan: T5 atau ALBERT (A Lite BERT)
+
+
+
+Algoritma ML Multiclass:
+Logistic Regression (yang bisa digunakan dalam bentuk One-vs-Rest atau softmax)
+
+Evaluasi multiclass:
+sama seperti ketika binary classify
+
+
+# Udemy App Review Sentiment
+
+#### Classifying Udemy App Reviews: Positive, Negative, and Neutral Sentiments with RoBERTa
+
+#### Sentiment Analysis on Udemy App Reviews with RoBERTa
+
+https://www.linkedin.com/posts/azri-andrizan-557586289_dbsfoundation-dicodingindonesia-codingcamp2024-activity-7216625103759900672-Ir4d?utm_source=share&utm_medium=member_desktop
+
+https://www.linkedin.com/posts/shandy-krisnawan_image-classification-project-activity-7211003124646305792-hH25?utm_source=share&utm_medium=member_desktop
+
+---------------------------------------------------------------------------
+                                Requirements.txt         
+---------------------------------------------------------------------------
+
+accelerate==0.22.0
+pyforest
+inflect
+contractions
+beautifulsoup4
+nltk
+transformers[torch]
+tensorflow
+wordcloud
+keras
+scikit-learn
+
+
+git init
+
+git add twitter_roberta_tokenizer.pth
+
+git commit -m "Add twitter_roberta_tokenizer"
+
+git remote add origin https://github.com/roniantoniius/Udemy-App-Review-Sentiment.git
+
+git push -u origin master
+
+
+
+git add trainer_twitter_roberta.pth
+
+git commit -m "Add trainer_twitter_roberta"
+
+git push origin master
+
+
+
+git add trainer_twitter_roberta.pth
+
+git commit -m "Add trainer_twitter_roberta"
+
+git push origin master
+
